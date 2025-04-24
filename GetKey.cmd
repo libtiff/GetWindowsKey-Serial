@@ -16,5 +16,6 @@ echo.
 
 
 powershell -Command "(Get-CimInstance -Class Win32_BIOS).SerialNumber | Out-File OUTPUT.txt"
-powershell -Command "(Get-CimInstance -Query \"SELECT OA3xOriginalProductKey FROM SoftwareLicensingService\").OA3xOriginalProductKey | Out-File OUTPUT.txt"
+powershell -Command "(Get-CimInstance -ClassName SoftwareLicensingService).OA3xOriginalProductKey | Out-File OUTPUT.txt"
+
 Pause
